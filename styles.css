@@ -1,0 +1,11 @@
+body {
+  text-align: center;
+}
+
+#score {
+  font-weight: bold;
+}
+
+#player-score, #computer-score {
+  font-weight: normal;
+}
