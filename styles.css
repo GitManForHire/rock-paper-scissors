@@ -1,11 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=IM+Fell+DW+Pica&family=Monofett&family=Special+Elite&family=VT323&family=Warnes&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #5D576B;
+  height: 100vh;
+  width: 100vw;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+#main {
   text-align: center;
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  background: #F1DEDE;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  font-size: 50px;
+}
+
+#button-row {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background-color: #E1DEE9;
+  border: 1px solid #3E3956;
+  padding: 5px;
+}
+
+#rock {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  width: 150px;
+}
+
+#paper {
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 20px;
+  width: 150px;
+}
+
+#scissors {
+  font-family: 'Warnes', cursive;
+  font-size: 20px;
+  width: 150px;
 }
 
 #score {
-  font-weight: bold;
+  margin: 20px 0;
+  font-family: 'VT323', monospace;
+  font-size: 40px;
 }
 
-#player-score, #computer-score {
-  font-weight: normal;
+#results {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  padding-bottom: 20px;
 }

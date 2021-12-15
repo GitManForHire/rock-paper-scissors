@@ -91,18 +91,17 @@ function playRound(playerSelection, computerSelection) {
 function updateResults(userScore, pcScore, result) {
   playerScore.innerText = userScore.toString();
   computerScore.innerText = pcScore.toString();
+
+  let outcome = document.createElement("p");
+  outcome.textContent = result;
+  results.insertBefore(outcome, results.childNodes[0]);
   
-  // Check to see if the player or computer has scored 5 points yet
+  // Check to see if the player or computer has scored 5 points yet  
   if (userScore === 5) {
     displayWin(true);
   }
   else if (pcScore === 5) {
     displayWin(false);
-  }
-  else {
-    let outcome = document.createElement("p");
-    outcome.textContent = result;
-    results.appendChild(outcome);
   }
 }
 
@@ -112,6 +111,8 @@ function displayWin(playerWon) {
     button.disabled = true;
   });
   
-  results.textContent = playerWon ? "Congratulations! 🥳 You won this game!" : "Too bad! 🤖 The computer won this game!";
-  results.style.fontSize = "25px";
+  let finalResult = document.createElement("p");
+  finalResult.textContent = playerWon ? "Congratulations! 🥳 You won this game!" : "Too bad! 🤖 The computer won this game!";
+  finalResult.style.fontSize = "40px";
+  results.insertBefore(finalResult, results.childNodes[0]);
 }
